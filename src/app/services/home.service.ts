@@ -1,5 +1,6 @@
 import {Inject, Injectable} from '@angular/core';
-import {APi_CONFIG, ServicesModule} from './services.module';
+import {ServicesModule} from './services.module';
+import {APi_CONFIG} from '../app.module';
 import {Observable} from 'rxjs';
 import {map} from 'rxjs/internal/operators';
 import {Banner, HotTags, PersonalSheet} from './data-type/common.type';

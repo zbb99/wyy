@@ -1,6 +1,6 @@
 import {Inject, Injectable} from '@angular/core';
 import {HttpClient, HttpParams} from '@angular/common/http';
-import {APi_CONFIG} from './services.module';
+import {APi_CONFIG} from '../app.module';
 import {Observable} from 'rxjs';
 import {Singer} from './data-type/common.type';
 import {map} from 'rxjs/operators';
