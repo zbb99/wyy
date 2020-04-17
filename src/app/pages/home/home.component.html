@@ -31,8 +31,12 @@
           <!--          热门推荐-->
           <div class="down">
             <div class="down-wrap">
-              <app-single-sheet class="sheet-item" *ngFor="let item of PersonalSheets"
-                                [sheet]="item"></app-single-sheet>
+              <app-single-sheet
+                class="sheet-item"
+                *ngFor="let item of PersonalSheets"
+                [sheet]="item"
+                (onPlay)="onPalySheet($event)"
+              ></app-single-sheet>
             </div>
           </div>
         </div>

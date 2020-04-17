@@ -5,6 +5,7 @@ import {NzCarouselComponent} from 'ng-zorro-antd';
 import {SingerService} from '../../services/singer.service';
 import {ActivatedRoute} from '@angular/router';
 import {map} from 'rxjs/operators';
+import {SheetService} from '../../services/sheet.service';
 
 @Component({
   selector: 'app-home',
@@ -21,7 +22,8 @@ export class HomeComponent implements OnInit {
 
   constructor(private homeService: HomeService,
               private singerService: SingerService,
-              private route: ActivatedRoute
+              private route: ActivatedRoute,
+              private sheetService: SheetService
   ) {
     // 从 resolve获取数据
     this.route.data.pipe(map(res => res.homeData)).subscribe(([banner, hotTags, PersonalSheets, SingerList]) => {
@@ -74,5 +76,12 @@ export class HomeComponent implements OnInit {
 
   ChangeSlide(type: 'pre' | 'next') {
     this.NzCarousel[type]();
+  }
+
+  // 歌单详情
+  onPalySheet(id: number) {
+    this.sheetService.playSheet(id).subscribe(res => {
+      console.log(res);
+    });
   }
 }
