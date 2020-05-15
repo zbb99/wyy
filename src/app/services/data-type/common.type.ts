@@ -11,6 +11,7 @@ export interface HotTags {
 
 }
 
+// 专辑
 export interface PersonalSheet {
   name: string;
   id: number;
@@ -19,6 +20,7 @@ export interface PersonalSheet {
   tracks: Song[];
 }
 
+// 歌手
 export interface Singer {
   id: number;
   name: string;
@@ -26,14 +28,17 @@ export interface Singer {
   albumSize: string;
 }
 
-// 歌曲
+// 播放 地址
+export interface SongUrl {
+  id: number;
+  url: string;
+}
+
 export interface Song {
-  id: string;
+  id: number;
   name: string;
   url: string;
   ar: Singer[];
   al: { id: number; name: string; picUrl: string };
   dt: number;
 }
-
-

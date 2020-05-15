@@ -11,7 +11,7 @@ git clone https://github.com/Binaryify/NeteaseCloudMusicApi.git
 ###### 安装依赖
 
 ```
-yarn init
+yarn 
 ```
 
 或者
