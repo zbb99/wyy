@@ -16,6 +16,7 @@ export interface PersonalSheet {
   id: number;
   playCount: number;
   picUrl: string;
+  tracks: Song[];
 }
 
 export interface Singer {
@@ -24,3 +25,15 @@ export interface Singer {
   picUrl: string;
   albumSize: string;
 }
+
+// 歌曲
+export interface Song {
+  id: string;
+  name: string;
+  url: string;
+  ar: Singer[];
+  al: { id: number; name: string; picUrl: string };
+  dt: number;
+}
+
+

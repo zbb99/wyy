@@ -5,6 +5,7 @@ import {Observable} from 'rxjs';
 import {Singer} from './data-type/common.type';
 import {map} from 'rxjs/operators';
 import * as querystring from 'querystring';
+import {ServicesModule} from './services.module';
 
 interface SingerParams {
   offset: number;
@@ -19,7 +20,7 @@ const defaultParams: SingerParams = {
 };
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: ServicesModule
 })
 export class SingerService {
 
